@@ -74,7 +74,7 @@ n  = 2;
 
 routing_function = dor;
 
-packet_size = 1;
+packet_size = 4;
 
 use_read_write = 0;
 
@@ -82,5 +82,5 @@ traffic       = uniform;
 
 injection_rate = 0.2;
 
-
-
+watch_out = -;
+watch_file = my_file;

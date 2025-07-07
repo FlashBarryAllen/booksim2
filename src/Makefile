@@ -26,7 +26,7 @@
 
 LEX = flex
 YACC   = bison -y
-DEFINE = 
+DEFINE = -DTRACK_FLOWS -DTRACK_CREDITS
 INCPATH = -I. -Iarbiters -Iallocators -Irouters -Inetworks -Ipower
 CPPFLAGS += -Wall $(INCPATH) $(DEFINE)
 CPPFLAGS += -O3
