@@ -222,32 +222,40 @@ void DenseAllocator::PrintRequests( ostream * os ) const
   for ( int input = 0; input < _inputs; ++input ) {
     bool print = false;
     ostringstream ss;
+
     for ( int output = 0; output < _outputs; ++output ) {
       const sRequest & req = _request[input][output];
+
       if ( req.label >= 0 ) {
-	print = true;
-	ss << output << "@" << req.in_pri << " ";
+        print = true;
+        ss << output << "@" << req.in_pri << " ";
       }
     }
+
     if(print) {
       *os << input << " -> [ " << ss.str() << "]  ";
     }
   }
+
   *os << "], output requests = [ ";
   for ( int output = 0; output < _outputs; ++output ) {
     bool print = false;
     ostringstream ss;
+
     for ( int input = 0; input < _inputs; ++input ) {
       const sRequest & req = _request[input][output];
+      
       if ( req.label >= 0 ) {
-	print = true;
-	ss << input << "@" << req.out_pri << " ";
+        print = true;
+        ss << input << "@" << req.out_pri << " ";
       }
     }
+
     if(print) {
       *os << output << " -> [ " << ss.str() << "]  ";
     }
   }
+
   *os << "]." << endl;
 }
 
