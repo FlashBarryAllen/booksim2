@@ -29,8 +29,8 @@
 // Flow control
 //
 
-num_vcs     = 2;
-vc_buf_size = 8;
+num_vcs     = 1;
+vc_buf_size = 2;
 
 wait_for_tail_credit = 1;
 
@@ -74,7 +74,7 @@ n  = 2;
 
 routing_function = dor;
 
-packet_size = 1;
+packet_size = 4;
 
 use_read_write = 0;
 arb_type = round_robin;
